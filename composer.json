@@ -10,5 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.7",
+        "gmponos/guzzle_logger": "^2.2",
+        "monolog/monolog": "^3.4"
+    }
 }
