@@ -1,0 +1,14 @@
+{
+    "name": "alpha/guzzle-with-logger",
+    "description": "Guzzle with Logger",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alpha Olomi",
+            "email": "alphaolomi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
