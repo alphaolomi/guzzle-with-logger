@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Alpha\Guzzle\Commands\AllCommand;
+use Alpha\Guzzle\Commands\GetCommand;
+use Alpha\Guzzle\Commands\PostCommand;
+use Symfony\Component\Console\Application;
+
+
+$application = new Application('GLogger', '1.0.0');
+
+$application->add(new AllCommand());
+$application->add(new GetCommand());
+$application->add(new PostCommand());
+
+$application->run();
