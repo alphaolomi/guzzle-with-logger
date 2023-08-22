@@ -40,12 +40,18 @@ class Client
 
         // will create a stack stack with middlewares of guzzle 
         // already pushed inside of it.
-        $stack = HandlerStack::create();
-        $stack->push(new LogMiddleware($logger));
+        $handlerStack = HandlerStack::create();
+        $handlerStack->push(new LogMiddleware(
+            $logger,
+            null,
+            $onFailureOnly = false,
+            $logStatistics = true
+        ));
 
         $this->client = new GuzzleClient([
             'base_uri' => 'https://jsonplaceholder.typicode.com/',
-            'handler' => $stack,
+            'handler' => $handlerStack,
+            'debug' => true,
         ]);
     }
 
